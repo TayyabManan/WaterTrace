@@ -74,8 +74,6 @@ Our analysis reveals a severe water crisis in Pakistan:
 
 ## 🗺️ Interactive Features
 
-### District-Level Groundwater Map
-![District Map](data/outputs/pakistan_districts_enhanced.html)
 
 The interactive map displays:
 - Color-coded markers indicating groundwater stress levels

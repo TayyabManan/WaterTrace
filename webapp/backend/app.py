@@ -11,13 +11,10 @@ app = Flask(__name__)
 
 # Configure CORS for production
 CORS(app, 
-     origins=[
-         "http://localhost:3000",  # Development
-         "https://watertrace.vercel.app",  # Production Vercel
-         "https://*.vercel.app"  # All Vercel preview deployments
-     ],
+     resources={r"/api/*": {"origins": "*"}},
      methods=["GET", "POST", "OPTIONS"],
-     allow_headers=["Content-Type", "Authorization"]
+     allow_headers=["Content-Type", "Authorization"],
+     supports_credentials=True
 )
 
 # Load models and data
@@ -63,6 +60,15 @@ except Exception as e:
     grace_data = None
     gldas_data = None
 
+@app.route('/')
+def home():
+    """Root endpoint"""
+    return jsonify({
+        'message': 'WaterTrace API is running',
+        'version': '1.0.0',
+        'endpoints': ['/api/health', '/api/analysis/summary', '/api/historical/timeseries', '/api/recent/timeseries']
+    })
+
 @app.route('/api/health')
 def health_check():
     """Health check endpoint"""
@@ -70,7 +76,8 @@ def health_check():
         'status': 'healthy',
         'timestamp': datetime.now().isoformat(),
         'models_loaded': model is not None,
-        'data_loaded': grace_data is not None and gldas_data is not None
+        'data_loaded': grace_data is not None and gldas_data is not None,
+        'cors_enabled': True
     })
 
 @app.route('/api/historical/timeseries')
