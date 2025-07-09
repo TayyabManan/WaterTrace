@@ -250,7 +250,7 @@ This project is part of the academic research portfolio. All rights reserved.
 **Tayyab Manan**
 - GitHub: [@TayyabManan](https://github.com/TayyabManan)
 - Portfolio: [tayyabmanan.vercel.app](https://tayyabmanan.vercel.app/)
-- LinkedIn: [Tayyab Manan](https://linkedin.com/in/tayyabmanan)
+- LinkedIn: [Tayyab Manan](www.linkedin.com/in/muhammad-tayyab-3962a2373)
 
 ## 🙏 Acknowledgments
 
@@ -262,7 +262,7 @@ This project is part of the academic research portfolio. All rights reserved.
 ## 📞 Contact
 
 For questions, suggestions, or collaborations:
-- Email: tayyab.manan@example.com
+- Email: haris.a.mannan@example.com
 - Issues: [GitHub Issues](https://github.com/TayyabManan/WaterTrace/issues)
 
 ---
