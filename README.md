@@ -152,16 +152,11 @@ REACT_APP_API_URL=https://your-backend-url.onrender.com
 
 ### Base URL
 ```
-Production: https://watertrace-backend.onrender.com
+Production: https://watertrace-api.onrender.com/
 Development: http://localhost:5000
 ```
 
 ### Endpoints
-
-#### Health Check
-```http
-GET /api/health
-```
 
 #### Analysis Summary
 ```http
