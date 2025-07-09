@@ -1,5 +1,31 @@
 /* Responsive styles for WaterTrace Dashboard */
 
+/* Tab Navigation Styles */
+[role="tablist"] {
+  background-color: #e0f2fe;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+
+[role="tab"] {
+  min-width: fit-content;
+  background-color: transparent;
+  color: #1e40af;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  margin-right: 0.25rem;
+}
+
+[role="tab"]:hover {
+  background-color: #dbeafe;
+}
+
+[role="tab"][data-state="active"] {
+  background-color: white;
+  color: #1e40af;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
 /* Tab scrolling on mobile */
 @media (max-width: 768px) {
   .tabs-list-container {

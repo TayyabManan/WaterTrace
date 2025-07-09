@@ -121,14 +121,16 @@ const WaterTraceDashboard = () => {
 
         {/* Main Analysis Tabs */}
         <Tabs defaultValue="overview" className="space-y-6">
-          <TabsList className="w-full overflow-x-auto flex flex-nowrap md:grid md:grid-cols-6 gap-1 p-1">
-            <TabsTrigger value="overview" className="whitespace-nowrap px-3 py-2 text-xs sm:text-sm">Overview</TabsTrigger>
-            <TabsTrigger value="map" className="whitespace-nowrap px-3 py-2 text-xs sm:text-sm">Map</TabsTrigger>
-            <TabsTrigger value="historical" className="whitespace-nowrap px-3 py-2 text-xs sm:text-sm">Historical</TabsTrigger>
-            <TabsTrigger value="recent" className="whitespace-nowrap px-3 py-2 text-xs sm:text-sm">Recent</TabsTrigger>
-            <TabsTrigger value="comparison" className="whitespace-nowrap px-3 py-2 text-xs sm:text-sm">Analysis</TabsTrigger>
-            <TabsTrigger value="conclusion" className="whitespace-nowrap px-3 py-2 text-xs sm:text-sm">Conclusion</TabsTrigger>
-          </TabsList>
+          <div className="w-full overflow-x-auto">
+            <TabsList className="inline-flex h-10 items-center justify-start rounded-md bg-muted p-1 text-muted-foreground min-w-full md:min-w-0">
+              <TabsTrigger value="overview" className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-xs sm:text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Overview</TabsTrigger>
+              <TabsTrigger value="map" className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-xs sm:text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Map</TabsTrigger>
+              <TabsTrigger value="historical" className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-xs sm:text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Historical</TabsTrigger>
+              <TabsTrigger value="recent" className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-xs sm:text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Recent</TabsTrigger>
+              <TabsTrigger value="comparison" className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-xs sm:text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Analysis</TabsTrigger>
+              <TabsTrigger value="conclusion" className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-xs sm:text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">Conclusion</TabsTrigger>
+            </TabsList>
+          </div>
 
           {/* Overview Tab */}
           <TabsContent value="overview" className="space-y-6">
