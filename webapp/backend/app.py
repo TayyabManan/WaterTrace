@@ -22,14 +22,12 @@ try:
     import os
     # Get the base directory (webapp/backend)
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    # Go up two levels to reach the root directory
-    root_dir = os.path.dirname(os.path.dirname(base_dir))
     
-    # Construct absolute paths
-    model_path = os.path.join(root_dir, 'data', 'processed', 'best_groundwater_model.pkl')
-    scaler_path = os.path.join(root_dir, 'data', 'processed', 'feature_scaler.pkl')
-    grace_path = os.path.join(root_dir, 'data', 'csv', 'pakistan_grace_2002_2017_complete.csv')
-    gldas_path = os.path.join(root_dir, 'data', 'csv', 'pakistan_gldas_2018_2024_monthly.csv')
+    # Use local data directory
+    model_path = os.path.join(base_dir, 'data', 'processed', 'best_groundwater_model.pkl')
+    scaler_path = os.path.join(base_dir, 'data', 'processed', 'feature_scaler.pkl')
+    grace_path = os.path.join(base_dir, 'data', 'csv', 'pakistan_grace_2002_2017_complete.csv')
+    gldas_path = os.path.join(base_dir, 'data', 'csv', 'pakistan_gldas_2018_2024_monthly.csv')
     
     # Load model
     model = joblib.load(model_path)
@@ -54,8 +52,8 @@ except Exception as e:
     print(f"⚠️ Error loading models/data: {e}")
     print(f"Current working directory: {os.getcwd()}")
     print(f"Base directory: {base_dir}")
-    print(f"Root directory: {root_dir}")
     print(f"Looking for model at: {model_path}")
+    print(f"Files in base dir: {os.listdir(base_dir) if os.path.exists(base_dir) else 'Base dir not found'}")
     model = None
     grace_data = None
     gldas_data = None
