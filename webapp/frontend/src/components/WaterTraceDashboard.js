@@ -4,6 +4,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import GroundwaterMap from './GroundwaterMap';
+import LoadingScreen from './LoadingScreen';
 import './WaterTrace.css';
 import API_URL from '../config';
 
@@ -14,30 +15,72 @@ const WaterTraceDashboard = () => {
   const [gldasAnalysis, setGldasAnalysis] = useState(null);
   const [summary, setSummary] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [loadingStage, setLoadingStage] = useState(0);
 
   useEffect(() => {
     fetchData();
   }, []);
+
+  const loadingStages = [
+    "Initializing WaterTrace Dashboard...",
+    "Waking up backend service (this may take up to 1 minute)...",
+    "Connecting to satellite data servers...",
+    "Fetching GRACE historical data (2002-2017)...",
+    "Loading GLDAS recent measurements (2018-2024)...",
+    "Processing district-level information...",
+    "Analyzing groundwater trends...",
+    "Preparing visualizations..."
+  ];
 
   const fetchData = async () => {
     try {
       console.log('API URL:', API_URL);
       console.log('Fetching data from WaterTrace backend...');
       
+      setLoadingStage(1); // Waking up service
+      
+      // Add timeout for fetch requests to handle cold starts
+      const fetchWithTimeout = (url, timeout = 60000) => {
+        return Promise.race([
+          fetch(url),
+          new Promise((_, reject) => 
+            setTimeout(() => reject(new Error('Request timeout')), timeout)
+          )
+        ]);
+      };
+      
+      // Try to wake up the service with a simple request first
+      try {
+        await fetchWithTimeout(`${API_URL}/api/analysis/summary`, 60000);
+        setLoadingStage(2); // Service is awake, connecting to servers
+      } catch (error) {
+        console.log('Service wake-up in progress...');
+      }
+      
       // Fetch all data
       const [historicalRes, recentRes, summaryRes, gldasRes, combinedRes] = await Promise.all([
-        fetch(`${API_URL}/api/historical/timeseries`),
-        fetch(`${API_URL}/api/recent/timeseries`), 
-        fetch(`${API_URL}/api/analysis/summary`),
-        fetch(`${API_URL}/api/gldas/trend-analysis`),
-        fetch(`${API_URL}/api/combined/timeline`)
+        fetchWithTimeout(`${API_URL}/api/historical/timeseries`).then(res => {
+          setLoadingStage(3); // GRACE data fetched
+          return res;
+        }),
+        fetchWithTimeout(`${API_URL}/api/recent/timeseries`).then(res => {
+          setLoadingStage(4); // GLDAS data fetched
+          return res;
+        }), 
+        fetchWithTimeout(`${API_URL}/api/analysis/summary`),
+        fetchWithTimeout(`${API_URL}/api/gldas/trend-analysis`),
+        fetchWithTimeout(`${API_URL}/api/combined/timeline`)
       ]);
+
+      setLoadingStage(5); // Processing district information
 
       const historical = await historicalRes.json();
       const recent = await recentRes.json();
       const summaryData = await summaryRes.json();
       const gldasData = await gldasRes.json();
       const combinedTimeline = await combinedRes.json();
+
+      setLoadingStage(6); // Analyzing trends
 
       setHistoricalData(historical.data || []);
       setRecentData(recent.data || []);
@@ -46,7 +89,13 @@ const WaterTraceDashboard = () => {
       setCombinedData(combinedTimeline.data || []);
       setSummary(summaryData);
       setGldasAnalysis(gldasData);
-      setLoading(false);
+      
+      setLoadingStage(7); // Preparing visualizations
+      
+      // Small delay to show final stage
+      setTimeout(() => {
+        setLoading(false);
+      }, 500);
     } catch (error) {
       console.error('Error fetching data:', error);
       setLoading(false);
@@ -54,7 +103,7 @@ const WaterTraceDashboard = () => {
   };
 
   if (loading) {
-    return <div className="flex justify-center items-center h-screen">Loading WaterTrace Dashboard...</div>;
+    return <LoadingScreen loadingStages={loadingStages} currentStage={loadingStage} />;
   }
 
   return (

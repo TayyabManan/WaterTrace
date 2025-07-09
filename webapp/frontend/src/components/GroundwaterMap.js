@@ -83,7 +83,17 @@ const GroundwaterMap = () => {
   };
 
   if (loading || !districtData) {
-    return <div className="flex justify-center items-center h-96">Loading map data...</div>;
+    return (
+      <div className="flex justify-center items-center h-96 bg-white/90 backdrop-blur-sm rounded-lg">
+        <div className="text-center">
+          <div className="inline-flex items-center justify-center w-12 h-12 mb-4">
+            <div className="w-full h-full border-4 border-blue-200 border-t-blue-500 rounded-full animate-spin"></div>
+          </div>
+          <p className="text-lg font-medium text-blue-900">Loading map data...</p>
+          <p className="text-sm text-blue-600 mt-1">Preparing district visualizations</p>
+        </div>
+      </div>
+    );
   }
 
   // Custom control component for the legend
