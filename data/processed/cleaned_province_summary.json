@@ -1,0 +1,29 @@
+{
+  "original_provinces": [
+    "Balochistan",
+    "Khyber Pakhtunkhwa",
+    "Punjab",
+    "Sindh",
+    "FATA",
+    "DISPUTED TERRITORY",
+    "FEDERAL CAPITAL TERRITORY",
+    "GILGIT-BALTISTAN",
+    "KHYBER PAKHTUNKHWA",
+    "AZAD KASHMIR",
+    "SINDH",
+    "PUNJAB",
+    "BALOCHISTAN"
+  ],
+  "cleaned_provinces": {
+    "Punjab": 36,
+    "Balochistan": 30,
+    "Khyber Pakhtunkhwa": 24,
+    "Sindh": 23,
+    "FATA": 13,
+    "Azad Kashmir": 10,
+    "Gilgit-Baltistan": 7,
+    "Disputed Territory": 1,
+    "Islamabad Capital Territory": 1
+  },
+  "total_districts": 145
+}

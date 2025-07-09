@@ -1,0 +1,54 @@
+{
+  "period": "2002-2017",
+  "data_source": "GRACE",
+  "statistics": {
+    "mean_groundwater_cm": -1.8505256670194612,
+    "std_groundwater_cm": 4.172417617532464,
+    "min_groundwater_cm": -14.306798191379029,
+    "max_groundwater_cm": 7.04170763247604,
+    "total_change": -13.712519605009085
+  },
+  "trend_analysis": {
+    "slope_cm_per_month": -0.06733312459916503,
+    "slope_cm_per_year": -0.8079974951899804,
+    "r_squared": 0.5801391873126214,
+    "p_value": 3.751103693750911e-32,
+    "trend_significance": "Significant"
+  },
+  "seasonal_patterns": {
+    "mean": {
+      "1": -3.764,
+      "2": 0.278,
+      "3": -0.322,
+      "4": -1.289,
+      "5": -4.164,
+      "6": -1.393,
+      "7": 0.381,
+      "8": 0.487,
+      "9": -1.861,
+      "10": -3.081,
+      "11": -4.115,
+      "12": -3.786
+    },
+    "std": {
+      "1": 4.702,
+      "2": 4.134,
+      "3": 4.181,
+      "4": 4.326,
+      "5": 3.796,
+      "6": 4.123,
+      "7": 3.462,
+      "8": 3.275,
+      "9": 3.28,
+      "10": 2.707,
+      "11": 3.798,
+      "12": 4.359
+    }
+  },
+  "key_findings": [
+    "Average groundwater depletion: -1.85 cm below normal",
+    "Long-term trend: -0.808 cm/year change",
+    "Total change over 15 years: -13.71 cm",
+    "Trend statistical significance: Significant"
+  ]
+}

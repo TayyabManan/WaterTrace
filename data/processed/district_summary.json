@@ -1,0 +1,43 @@
+{
+  "total_districts": 145,
+  "provinces": [
+    "Balochistan",
+    "Khyber Pakhtunkhwa",
+    "Punjab",
+    "Sindh",
+    "FATA",
+    "DISPUTED TERRITORY",
+    "FEDERAL CAPITAL TERRITORY",
+    "GILGIT-BALTISTAN",
+    "KHYBER PAKHTUNKHWA",
+    "AZAD KASHMIR",
+    "SINDH",
+    "PUNJAB",
+    "BALOCHISTAN"
+  ],
+  "province_counts": {
+    "Punjab": 26,
+    "KHYBER PAKHTUNKHWA": 22,
+    "Sindh": 19,
+    "BALOCHISTAN": 17,
+    "FATA": 13,
+    "Balochistan": 13,
+    "AZAD KASHMIR": 10,
+    "PUNJAB": 10,
+    "GILGIT-BALTISTAN": 7,
+    "SINDH": 4,
+    "Khyber Pakhtunkhwa": 2,
+    "DISPUTED TERRITORY": 1,
+    "FEDERAL CAPITAL TERRITORY": 1
+  },
+  "bounds": {
+    "west": 60.891856000000075,
+    "south": 23.788882000000058,
+    "east": 79.31004900000005,
+    "north": 37.09759000000008
+  },
+  "center": [
+    30.44323600000007,
+    70.10095250000006
+  ]
+}

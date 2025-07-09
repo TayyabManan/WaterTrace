@@ -1,0 +1,25 @@
+{
+  "period": "2018-2024",
+  "data_source": "GLDAS",
+  "primary_variable": "groundwater_cm",
+  "statistics": {
+    "mean_value": 254.54613613579644,
+    "std_value": 8.775238296162957,
+    "min_value": 240.58566308932237,
+    "max_value": 283.0249605257459,
+    "recent_change": 10.297540693083562,
+    "column_used": "groundwater_cm"
+  },
+  "water_variables_found": [
+    "groundwater_cm"
+  ],
+  "total_data_points": 84,
+  "visualizations_created": 3,
+  "key_findings": [
+    "Primary variable used: groundwater_cm",
+    "Mean value: 254.546136",
+    "Total change over period: 10.297541",
+    "Trend direction: Increasing",
+    "Data coverage: 2018-01-15 00:00:00 to 2024-12-15 00:00:00"
+  ]
+}

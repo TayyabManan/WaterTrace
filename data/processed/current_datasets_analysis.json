@@ -1,0 +1,151 @@
+{
+  "analysis_date": "2025-07-08T22:54:28.306647",
+  "working_datasets": [
+    {
+      "name": "GRACE/GRACE-FO Monthly Mass Grids",
+      "id": "NASA/GRACE/MASS_GRIDS/OCEAN_EOFR",
+      "description": "Ocean bottom pressure",
+      "total_images": 150,
+      "first_date": "2002-12-31",
+      "last_date": "2016-12-10",
+      "bands": [
+        "lwe_thickness_csr",
+        "lwe_thickness_gfz",
+        "lwe_thickness_jpl"
+      ],
+      "has_recent_data": false,
+      "status": "working"
+    },
+    {
+      "name": "GRACE Alternative Processing",
+      "id": "NASA/GRACE/MASS_GRIDS/MASCON",
+      "description": "Alternative GRACE processing",
+      "total_images": 163,
+      "first_date": "2002-03-31",
+      "last_date": "2017-05-22",
+      "bands": [
+        "lwe_thickness",
+        "uncertainty"
+      ],
+      "has_recent_data": false,
+      "status": "working"
+    },
+    {
+      "name": "MODIS Global Terrestrial Evapotranspiration",
+      "id": "MODIS/NTSG/MOD16A2/105",
+      "description": "Current evapotranspiration data",
+      "total_images": 690,
+      "first_date": "2000-01-01",
+      "last_date": "2014-12-27",
+      "bands": [
+        "ET",
+        "LE",
+        "PET",
+        "PLE",
+        "ET_QC"
+      ],
+      "has_recent_data": false,
+      "status": "working"
+    },
+    {
+      "name": "ERA5 Reanalysis (Latest)",
+      "id": "ECMWF/ERA5/DAILY",
+      "description": "Recent weather reanalysis with soil moisture",
+      "total_images": 15165,
+      "first_date": "1979-01-02",
+      "last_date": "2020-07-09",
+      "bands": [
+        "mean_2m_air_temperature",
+        "minimum_2m_air_temperature",
+        "maximum_2m_air_temperature",
+        "dewpoint_2m_temperature",
+        "total_precipitation",
+        "surface_pressure",
+        "mean_sea_level_pressure",
+        "u_component_of_wind_10m",
+        "v_component_of_wind_10m"
+      ],
+      "has_recent_data": true,
+      "status": "working"
+    },
+    {
+      "name": "GPM Precipitation (Current)",
+      "id": "NASA/GPM_L3/IMERG_V06",
+      "description": "Current precipitation data",
+      "total_images": 420851,
+      "first_date": "2000-06-01",
+      "last_date": "2024-06-02",
+      "bands": [
+        "HQobservationTime",
+        "HQprecipSource",
+        "HQprecipitation",
+        "IRkalmanFilterWeight",
+        "IRprecipitation",
+        "precipitationCal",
+        "precipitationUncal",
+        "probabilityLiquidPrecipitation",
+        "randomError"
+      ],
+      "has_recent_data": true,
+      "status": "working"
+    }
+  ],
+  "current_datasets_with_recent_data": [
+    {
+      "name": "ERA5 Reanalysis (Latest)",
+      "id": "ECMWF/ERA5/DAILY",
+      "description": "Recent weather reanalysis with soil moisture",
+      "total_images": 15165,
+      "first_date": "1979-01-02",
+      "last_date": "2020-07-09",
+      "bands": [
+        "mean_2m_air_temperature",
+        "minimum_2m_air_temperature",
+        "maximum_2m_air_temperature",
+        "dewpoint_2m_temperature",
+        "total_precipitation",
+        "surface_pressure",
+        "mean_sea_level_pressure",
+        "u_component_of_wind_10m",
+        "v_component_of_wind_10m"
+      ],
+      "has_recent_data": true,
+      "status": "working"
+    },
+    {
+      "name": "GPM Precipitation (Current)",
+      "id": "NASA/GPM_L3/IMERG_V06",
+      "description": "Current precipitation data",
+      "total_images": 420851,
+      "first_date": "2000-06-01",
+      "last_date": "2024-06-02",
+      "bands": [
+        "HQobservationTime",
+        "HQprecipSource",
+        "HQprecipitation",
+        "IRkalmanFilterWeight",
+        "IRprecipitation",
+        "precipitationCal",
+        "precipitationUncal",
+        "probabilityLiquidPrecipitation",
+        "randomError"
+      ],
+      "has_recent_data": true,
+      "status": "working"
+    }
+  ],
+  "deprecated_datasets": [],
+  "recommendations": [
+    "Use current, non-deprecated datasets found",
+    "Primary option: ERA5 Reanalysis (Latest) (ECMWF/ERA5/DAILY)",
+    "Primary option: GPM Precipitation (Current) (NASA/GPM_L3/IMERG_V06)",
+    "Use GLDAS V021 for recent years (proven to work)",
+    "Combine multiple datasets for complete timeline"
+  ],
+  "next_steps": [
+    "Test the recommended datasets with Pakistan boundaries",
+    "Create export scripts using current datasets only",
+    "Ensure no deprecation warnings in final code",
+    "Document dataset versions for reproducibility"
+  ]
+}

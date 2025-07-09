@@ -1,0 +1,34 @@
+{
+  "datasets": {
+    "grace_historical": {
+      "period": "2002-2017",
+      "images": 163,
+      "task_id": "NMONNJTBUDR3N5ZZ6LAHJOTJ",
+      "band": "lwe_thickness",
+      "unit": "cm",
+      "description": "Actual groundwater anomaly from GRACE satellites"
+    },
+    "gldas_recent": {
+      "period": "2018-2024",
+      "monthly_points": 84,
+      "task_id": "YVZ2U5G4V7X663W36KHOEIQK",
+      "band": "SoilMoi100_200cm_inst",
+      "unit": "m\u00b3/m\u00b3",
+      "description": "Deep soil moisture (100-200cm) as groundwater proxy"
+    }
+  },
+  "complete_timeline": {
+    "period": "2002-2024",
+    "total_years": 22,
+    "grace_years": "2002-2017 (15 years)",
+    "gldas_years": "2018-2024 (7 years)",
+    "overlap_analysis": "Can calibrate GLDAS against GRACE using 2017 overlap"
+  },
+  "next_steps": [
+    "Wait for exports to complete (5-10 minutes)",
+    "Download CSV files from Google Drive",
+    "Harmonize the two datasets",
+    "Create complete 22-year timeline",
+    "Analyze trends and patterns"
+  ]
+}

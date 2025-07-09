@@ -1,0 +1,93 @@
+/* Responsive styles for WaterTrace Dashboard */
+
+/* Tab scrolling on mobile */
+@media (max-width: 768px) {
+  .tabs-list-container {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .tabs-list-container::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .tabs-list-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  .tabs-list-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 2px;
+  }
+
+  /* Smaller padding for cards on mobile */
+  .card-compact {
+    padding: 0.5rem;
+  }
+
+  /* Stack chart legend on mobile */
+  .recharts-legend-wrapper {
+    position: relative !important;
+    margin-top: 10px !important;
+  }
+
+  /* Responsive map height */
+  .map-container {
+    height: 400px !important;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .map-container {
+    height: 500px !important;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .map-container {
+    height: 600px !important;
+  }
+}
+
+/* Fix tab overflow */
+.tabs-scroll-container {
+  -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none;     /* Hide scrollbar for Firefox */
+}
+
+.tabs-scroll-container::-webkit-scrollbar {
+  display: none;  /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+/* Ensure charts are responsive */
+.recharts-wrapper {
+  width: 100% !important;
+}
+
+.recharts-surface {
+  overflow: visible;
+}
+
+/* Footer spacing on mobile */
+@media (max-width: 640px) {
+  footer {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Card text size adjustments */
+@media (max-width: 640px) {
+  .card-title-responsive {
+    font-size: 0.875rem;
+  }
+  
+  .card-value-responsive {
+    font-size: 1.5rem;
+  }
+  
+  .card-subtitle-responsive {
+    font-size: 0.625rem;
+  }
+}

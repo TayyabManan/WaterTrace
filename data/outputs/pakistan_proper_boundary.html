@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1b3f76c6962a449b3da2c7f80cc1b928 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1b3f76c6962a449b3da2c7f80cc1b928" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1b3f76c6962a449b3da2c7f80cc1b928 = L.map(
+                "map_1b3f76c6962a449b3da2c7f80cc1b928",
+                {
+                    center: [30.3753, 69.3451],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_eef32f57210412230384c7205bb263f0 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_eef32f57210412230384c7205bb263f0.addTo(map_1b3f76c6962a449b3da2c7f80cc1b928);
+        
+    
+            var polygon_030549aa921dbe6490c0029328ceeecf = L.polygon(
+                [[23.6345, 60.8742], [24.8607, 67.0011], [25.396, 68.3578], [26.0, 70.0], [28.0, 70.25], [29.0, 71.0], [31.5804, 74.3587], [32.5, 74.5], [33.6844, 73.0479], [34.0151, 71.5249], [35.0, 72.0], [36.0, 73.0], [36.5, 74.0], [35.0, 77.0], [34.0, 76.0], [32.0, 75.0], [30.0, 72.0], [28.0, 68.0], [26.0, 66.0], [25.0, 64.0], [26.0, 62.0], [28.0, 61.0], [30.1798, 66.975], [31.0, 61.0], [33.0, 60.8742], [30.0, 60.8742], [26.0, 61.0], [23.6345, 60.8742]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1b3f76c6962a449b3da2c7f80cc1b928);
+        
+    
+        var popup_48bff52864db592d5614d0d4d4d4e836 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_921e1fd369f53ab1342d28e343d936b3 = $(`<div id="html_921e1fd369f53ab1342d28e343d936b3" style="width: 100.0%; height: 100.0%;">Pakistan Study Area</div>`)[0];
+                popup_48bff52864db592d5614d0d4d4d4e836.setContent(html_921e1fd369f53ab1342d28e343d936b3);
+            
+        
+
+        polygon_030549aa921dbe6490c0029328ceeecf.bindPopup(popup_48bff52864db592d5614d0d4d4d4e836)
+        ;
+
+        
+    
+    
+            polygon_030549aa921dbe6490c0029328ceeecf.bindTooltip(
+                `<div>
+                     Pakistan Boundary
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a91f07965fd7ea4a8fe07cd10a523542 = L.marker(
+                [24.8607, 67.0011],
+                {
+}
+            ).addTo(map_1b3f76c6962a449b3da2c7f80cc1b928);
+        
+    
+            var icon_632caa30b8ddc7f43dd32464a6546709 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "glyphicon-home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e49e957453494790cf5b328c68278078 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c1fbc85f9d0ae67b7bd438577ed397e6 = $(`<div id="html_c1fbc85f9d0ae67b7bd438577ed397e6" style="width: 100.0%; height: 100.0%;">Karachi - Major City</div>`)[0];
+                popup_e49e957453494790cf5b328c68278078.setContent(html_c1fbc85f9d0ae67b7bd438577ed397e6);
+            
+        
+
+        marker_a91f07965fd7ea4a8fe07cd10a523542.bindPopup(popup_e49e957453494790cf5b328c68278078)
+        ;
+
+        
+    
+    
+            marker_a91f07965fd7ea4a8fe07cd10a523542.bindTooltip(
+                `<div>
+                     Karachi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a91f07965fd7ea4a8fe07cd10a523542.setIcon(icon_632caa30b8ddc7f43dd32464a6546709);
+            
+    
+            var marker_401c558bbd31b571654897878e3dc778 = L.marker(
+                [31.5804, 74.3587],
+                {
+}
+            ).addTo(map_1b3f76c6962a449b3da2c7f80cc1b928);
+        
+    
+            var icon_4e87bdd483ede1446124ad741eb8ae9c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "glyphicon-home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9508f220ff626dd394625345445a62be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b0187e60be04a1d3946df9001066ebf8 = $(`<div id="html_b0187e60be04a1d3946df9001066ebf8" style="width: 100.0%; height: 100.0%;">Lahore - Major City</div>`)[0];
+                popup_9508f220ff626dd394625345445a62be.setContent(html_b0187e60be04a1d3946df9001066ebf8);
+            
+        
+
+        marker_401c558bbd31b571654897878e3dc778.bindPopup(popup_9508f220ff626dd394625345445a62be)
+        ;
+
+        
+    
+    
+            marker_401c558bbd31b571654897878e3dc778.bindTooltip(
+                `<div>
+                     Lahore
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_401c558bbd31b571654897878e3dc778.setIcon(icon_4e87bdd483ede1446124ad741eb8ae9c);
+            
+    
+            var marker_d70e98003d799674ef159728c6d865bb = L.marker(
+                [33.6844, 73.0479],
+                {
+}
+            ).addTo(map_1b3f76c6962a449b3da2c7f80cc1b928);
+        
+    
+            var icon_c7696bd3f75c2d12f466826bfd2d0096 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "glyphicon-home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c153f2b812e6d36fbc881dfd2e3a9fcd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c2cdee28b9b7c1e4319fe95fb0e486a6 = $(`<div id="html_c2cdee28b9b7c1e4319fe95fb0e486a6" style="width: 100.0%; height: 100.0%;">Islamabad - Major City</div>`)[0];
+                popup_c153f2b812e6d36fbc881dfd2e3a9fcd.setContent(html_c2cdee28b9b7c1e4319fe95fb0e486a6);
+            
+        
+
+        marker_d70e98003d799674ef159728c6d865bb.bindPopup(popup_c153f2b812e6d36fbc881dfd2e3a9fcd)
+        ;
+
+        
+    
+    
+            marker_d70e98003d799674ef159728c6d865bb.bindTooltip(
+                `<div>
+                     Islamabad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d70e98003d799674ef159728c6d865bb.setIcon(icon_c7696bd3f75c2d12f466826bfd2d0096);
+            
+    
+            var marker_64ea36b6f5bd285209649703efb55201 = L.marker(
+                [33.5651, 73.0169],
+                {
+}
+            ).addTo(map_1b3f76c6962a449b3da2c7f80cc1b928);
+        
+    
+            var icon_a677bee6a1abe0f6bde9a7a29b3f3f20 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "glyphicon-home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_19908c8b8d0facffa897cb991f798b8f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7dd4e17936fb02e4bf1ffc01f8ba167d = $(`<div id="html_7dd4e17936fb02e4bf1ffc01f8ba167d" style="width: 100.0%; height: 100.0%;">Rawalpindi - Major City</div>`)[0];
+                popup_19908c8b8d0facffa897cb991f798b8f.setContent(html_7dd4e17936fb02e4bf1ffc01f8ba167d);
+            
+        
+
+        marker_64ea36b6f5bd285209649703efb55201.bindPopup(popup_19908c8b8d0facffa897cb991f798b8f)
+        ;
+
+        
+    
+    
+            marker_64ea36b6f5bd285209649703efb55201.bindTooltip(
+                `<div>
+                     Rawalpindi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_64ea36b6f5bd285209649703efb55201.setIcon(icon_a677bee6a1abe0f6bde9a7a29b3f3f20);
+            
+    
+            var marker_9049b529fb482633de1056e7b1a19326 = L.marker(
+                [31.4504, 73.135],
+                {
+}
+            ).addTo(map_1b3f76c6962a449b3da2c7f80cc1b928);
+        
+    
+            var icon_39824484ff280f23daa1509a0aa59a31 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "glyphicon-home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cac80347a18a636234217308ee356afa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b55cf1f3a5e8fbbca193f3b575ac14f2 = $(`<div id="html_b55cf1f3a5e8fbbca193f3b575ac14f2" style="width: 100.0%; height: 100.0%;">Faisalabad - Major City</div>`)[0];
+                popup_cac80347a18a636234217308ee356afa.setContent(html_b55cf1f3a5e8fbbca193f3b575ac14f2);
+            
+        
+
+        marker_9049b529fb482633de1056e7b1a19326.bindPopup(popup_cac80347a18a636234217308ee356afa)
+        ;
+
+        
+    
+    
+            marker_9049b529fb482633de1056e7b1a19326.bindTooltip(
+                `<div>
+                     Faisalabad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9049b529fb482633de1056e7b1a19326.setIcon(icon_39824484ff280f23daa1509a0aa59a31);
+            
+    
+            var marker_43fdf7ca54caeae7a056cfb221796586 = L.marker(
+                [34.0151, 71.5249],
+                {
+}
+            ).addTo(map_1b3f76c6962a449b3da2c7f80cc1b928);
+        
+    
+            var icon_16f0e27866a25929df5e7092db613112 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "glyphicon-home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_776b7995da5a978ae32f40c917a1e818 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d488b0dae00c8e94b706c0161d6b3079 = $(`<div id="html_d488b0dae00c8e94b706c0161d6b3079" style="width: 100.0%; height: 100.0%;">Peshawar - Major City</div>`)[0];
+                popup_776b7995da5a978ae32f40c917a1e818.setContent(html_d488b0dae00c8e94b706c0161d6b3079);
+            
+        
+
+        marker_43fdf7ca54caeae7a056cfb221796586.bindPopup(popup_776b7995da5a978ae32f40c917a1e818)
+        ;
+
+        
+    
+    
+            marker_43fdf7ca54caeae7a056cfb221796586.bindTooltip(
+                `<div>
+                     Peshawar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_43fdf7ca54caeae7a056cfb221796586.setIcon(icon_16f0e27866a25929df5e7092db613112);
+            
+    
+            var marker_8fcf0c04e888e6d622fec8835ffdbede = L.marker(
+                [30.1798, 66.975],
+                {
+}
+            ).addTo(map_1b3f76c6962a449b3da2c7f80cc1b928);
+        
+    
+            var icon_103668b3d6c61db89dfc68e09675a7cb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "glyphicon-home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b53ff7e5674d3661ed31876fc2a6053a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b48b1e2b717774e918a05a2bc02e26fc = $(`<div id="html_b48b1e2b717774e918a05a2bc02e26fc" style="width: 100.0%; height: 100.0%;">Quetta - Major City</div>`)[0];
+                popup_b53ff7e5674d3661ed31876fc2a6053a.setContent(html_b48b1e2b717774e918a05a2bc02e26fc);
+            
+        
+
+        marker_8fcf0c04e888e6d622fec8835ffdbede.bindPopup(popup_b53ff7e5674d3661ed31876fc2a6053a)
+        ;
+
+        
+    
+    
+            marker_8fcf0c04e888e6d622fec8835ffdbede.bindTooltip(
+                `<div>
+                     Quetta
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8fcf0c04e888e6d622fec8835ffdbede.setIcon(icon_103668b3d6c61db89dfc68e09675a7cb);
+            
+    
+            var marker_6c17be91ba91d28f84c53f0ae0934e4e = L.marker(
+                [30.1575, 71.5249],
+                {
+}
+            ).addTo(map_1b3f76c6962a449b3da2c7f80cc1b928);
+        
+    
+            var icon_3a66a2463bd2c498122987489d40294f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "glyphicon-home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c4b63a7535859b6d3ce41000f411195c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_784968b13228aaada67ae8b2f2b44c3a = $(`<div id="html_784968b13228aaada67ae8b2f2b44c3a" style="width: 100.0%; height: 100.0%;">Multan - Major City</div>`)[0];
+                popup_c4b63a7535859b6d3ce41000f411195c.setContent(html_784968b13228aaada67ae8b2f2b44c3a);
+            
+        
+
+        marker_6c17be91ba91d28f84c53f0ae0934e4e.bindPopup(popup_c4b63a7535859b6d3ce41000f411195c)
+        ;
+
+        
+    
+    
+            marker_6c17be91ba91d28f84c53f0ae0934e4e.bindTooltip(
+                `<div>
+                     Multan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6c17be91ba91d28f84c53f0ae0934e4e.setIcon(icon_3a66a2463bd2c498122987489d40294f);
+            
+    
+            var marker_72350eafeb97277e5688ed658f1a27b4 = L.marker(
+                [32.1877, 74.1945],
+                {
+}
+            ).addTo(map_1b3f76c6962a449b3da2c7f80cc1b928);
+        
+    
+            var icon_3e10efdab3e7975e93c1b27f3c374ffe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "glyphicon-home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1e17a28ce8231fea2b33044623ec2003 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6c606e5eb95ac75cb62c7a65971b3a66 = $(`<div id="html_6c606e5eb95ac75cb62c7a65971b3a66" style="width: 100.0%; height: 100.0%;">Gujranwala - Major City</div>`)[0];
+                popup_1e17a28ce8231fea2b33044623ec2003.setContent(html_6c606e5eb95ac75cb62c7a65971b3a66);
+            
+        
+
+        marker_72350eafeb97277e5688ed658f1a27b4.bindPopup(popup_1e17a28ce8231fea2b33044623ec2003)
+        ;
+
+        
+    
+    
+            marker_72350eafeb97277e5688ed658f1a27b4.bindTooltip(
+                `<div>
+                     Gujranwala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_72350eafeb97277e5688ed658f1a27b4.setIcon(icon_3e10efdab3e7975e93c1b27f3c374ffe);
+            
+    
+            var circle_marker_229825bebf0fc25641a75f27fa44a30d = L.circleMarker(
+                [31.1471, 72.7478],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1b3f76c6962a449b3da2c7f80cc1b928);
+        
+    
+        var popup_b913264ce711abac5bbb69424e3be1a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_819c7c8aad0c8a507e6362ba2e30fd95 = $(`<div id="html_819c7c8aad0c8a507e6362ba2e30fd95" style="width: 100.0%; height: 100.0%;">Punjab Center</div>`)[0];
+                popup_b913264ce711abac5bbb69424e3be1a3.setContent(html_819c7c8aad0c8a507e6362ba2e30fd95);
+            
+        
+
+        circle_marker_229825bebf0fc25641a75f27fa44a30d.bindPopup(popup_b913264ce711abac5bbb69424e3be1a3)
+        ;
+
+        
+    
+    
+            circle_marker_229825bebf0fc25641a75f27fa44a30d.bindTooltip(
+                `<div>
+                     Punjab Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_316c6b682f77a176996bed91774ea8cd = L.circleMarker(
+                [26.254, 68.4593],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1b3f76c6962a449b3da2c7f80cc1b928);
+        
+    
+        var popup_ddc40f840cb9b4474f7c4e5036ccb7dc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c07a89a7faa3dd56b73f9ba56d3dc19 = $(`<div id="html_5c07a89a7faa3dd56b73f9ba56d3dc19" style="width: 100.0%; height: 100.0%;">Sindh Center</div>`)[0];
+                popup_ddc40f840cb9b4474f7c4e5036ccb7dc.setContent(html_5c07a89a7faa3dd56b73f9ba56d3dc19);
+            
+        
+
+        circle_marker_316c6b682f77a176996bed91774ea8cd.bindPopup(popup_ddc40f840cb9b4474f7c4e5036ccb7dc)
+        ;
+
+        
+    
+    
+            circle_marker_316c6b682f77a176996bed91774ea8cd.bindTooltip(
+                `<div>
+                     Sindh Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3f5aba76a06c2d8ca96020ddce1d8f78 = L.circleMarker(
+                [34.0, 71.0],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1b3f76c6962a449b3da2c7f80cc1b928);
+        
+    
+        var popup_35c79ebc8c251645e95446090ee89e64 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c11829a5cfd0d01b2d73b2e27de6e23 = $(`<div id="html_5c11829a5cfd0d01b2d73b2e27de6e23" style="width: 100.0%; height: 100.0%;">KPK Center</div>`)[0];
+                popup_35c79ebc8c251645e95446090ee89e64.setContent(html_5c11829a5cfd0d01b2d73b2e27de6e23);
+            
+        
+
+        circle_marker_3f5aba76a06c2d8ca96020ddce1d8f78.bindPopup(popup_35c79ebc8c251645e95446090ee89e64)
+        ;
+
+        
+    
+    
+            circle_marker_3f5aba76a06c2d8ca96020ddce1d8f78.bindTooltip(
+                `<div>
+                     KPK Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a1abb069b591c8d90a77f36feb3a179 = L.circleMarker(
+                [28.5, 64.0],
+                {"bubblingMouseEvents": true, "color": "darkorange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkorange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_1b3f76c6962a449b3da2c7f80cc1b928);
+        
+    
+        var popup_37856410be40d7a5f8c0c937c15d3b9e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6b425f84760c269be3df5b6a51dd5754 = $(`<div id="html_6b425f84760c269be3df5b6a51dd5754" style="width: 100.0%; height: 100.0%;">Balochistan Center</div>`)[0];
+                popup_37856410be40d7a5f8c0c937c15d3b9e.setContent(html_6b425f84760c269be3df5b6a51dd5754);
+            
+        
+
+        circle_marker_1a1abb069b591c8d90a77f36feb3a179.bindPopup(popup_37856410be40d7a5f8c0c937c15d3b9e)
+        ;
+
+        
+    
+    
+            circle_marker_1a1abb069b591c8d90a77f36feb3a179.bindTooltip(
+                `<div>
+                     Balochistan Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

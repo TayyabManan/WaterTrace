@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8dfdc6530c9a29112f711c0a9ef8cea5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8dfdc6530c9a29112f711c0a9ef8cea5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8dfdc6530c9a29112f711c0a9ef8cea5 = L.map(
+                "map_8dfdc6530c9a29112f711c0a9ef8cea5",
+                {
+                    center: [30.3753, 69.3451],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c68a99f8c5a2ca96f2557a264ceafda8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c68a99f8c5a2ca96f2557a264ceafda8.addTo(map_8dfdc6530c9a29112f711c0a9ef8cea5);
+        
+    
+            var marker_2e45c20e02392b8cd56770dbf0c6e1f0 = L.marker(
+                [30.3753, 69.3451],
+                {
+}
+            ).addTo(map_8dfdc6530c9a29112f711c0a9ef8cea5);
+        
+    
+            var icon_b62ba641011dcefe17165e29f3b34542 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_87f10df9d8d5c970d6b166131711a0f8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b34ec49082056321a2e85e688b632802 = $(`<div id="html_b34ec49082056321a2e85e688b632802" style="width: 100.0%; height: 100.0%;">Pakistan Study Area</div>`)[0];
+                popup_87f10df9d8d5c970d6b166131711a0f8.setContent(html_b34ec49082056321a2e85e688b632802);
+            
+        
+
+        marker_2e45c20e02392b8cd56770dbf0c6e1f0.bindPopup(popup_87f10df9d8d5c970d6b166131711a0f8)
+        ;
+
+        
+    
+    
+            marker_2e45c20e02392b8cd56770dbf0c6e1f0.bindTooltip(
+                `<div>
+                     Click for details
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2e45c20e02392b8cd56770dbf0c6e1f0.setIcon(icon_b62ba641011dcefe17165e29f3b34542);
+            
+    
+            var circle_ef54ffb6af4c430e39987f7d00bcb4ba = L.circle(
+                [30.3753, 69.3451],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.6, "radius": 500000, "stroke": true, "weight": 3}
+            ).addTo(map_8dfdc6530c9a29112f711c0a9ef8cea5);
+        
+    
+        var popup_bbcbf93e306acb2a2af8b325a49fa611 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91eb7d183e6c86b08c88c4bbb8c42112 = $(`<div id="html_91eb7d183e6c86b08c88c4bbb8c42112" style="width: 100.0%; height: 100.0%;">Pakistan Groundwater Study Area</div>`)[0];
+                popup_bbcbf93e306acb2a2af8b325a49fa611.setContent(html_91eb7d183e6c86b08c88c4bbb8c42112);
+            
+        
+
+        circle_ef54ffb6af4c430e39987f7d00bcb4ba.bindPopup(popup_bbcbf93e306acb2a2af8b325a49fa611)
+        ;
+
+        
+    
+    
+            var marker_da0cdc30a701ea6dabe19cf4694787d4 = L.marker(
+                [24.8607, 67.0011],
+                {
+}
+            ).addTo(map_8dfdc6530c9a29112f711c0a9ef8cea5);
+        
+    
+            var icon_a86c2e9644ef9739e38050d7b0479e15 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "glyphicon-home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_acce269795fe2601eb1ac63b8385f04d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2aca03b9827b889f0f27c42b9d7758b7 = $(`<div id="html_2aca03b9827b889f0f27c42b9d7758b7" style="width: 100.0%; height: 100.0%;">Karachi</div>`)[0];
+                popup_acce269795fe2601eb1ac63b8385f04d.setContent(html_2aca03b9827b889f0f27c42b9d7758b7);
+            
+        
+
+        marker_da0cdc30a701ea6dabe19cf4694787d4.bindPopup(popup_acce269795fe2601eb1ac63b8385f04d)
+        ;
+
+        
+    
+    
+            marker_da0cdc30a701ea6dabe19cf4694787d4.bindTooltip(
+                `<div>
+                     Karachi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_da0cdc30a701ea6dabe19cf4694787d4.setIcon(icon_a86c2e9644ef9739e38050d7b0479e15);
+            
+    
+            var marker_c1995e469cb7cd6830f3d22fb757659a = L.marker(
+                [31.5804, 74.3587],
+                {
+}
+            ).addTo(map_8dfdc6530c9a29112f711c0a9ef8cea5);
+        
+    
+            var icon_1f7207fa30e8dc204bc2111b4a3642dd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "glyphicon-home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c476fa3ae33b0184959432c1a5876c5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b75193161368af8d83b6c28dd39a2fef = $(`<div id="html_b75193161368af8d83b6c28dd39a2fef" style="width: 100.0%; height: 100.0%;">Lahore</div>`)[0];
+                popup_1c476fa3ae33b0184959432c1a5876c5.setContent(html_b75193161368af8d83b6c28dd39a2fef);
+            
+        
+
+        marker_c1995e469cb7cd6830f3d22fb757659a.bindPopup(popup_1c476fa3ae33b0184959432c1a5876c5)
+        ;
+
+        
+    
+    
+            marker_c1995e469cb7cd6830f3d22fb757659a.bindTooltip(
+                `<div>
+                     Lahore
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c1995e469cb7cd6830f3d22fb757659a.setIcon(icon_1f7207fa30e8dc204bc2111b4a3642dd);
+            
+    
+            var marker_a344535f31637209aa25235ea33ca3e3 = L.marker(
+                [33.6844, 73.0479],
+                {
+}
+            ).addTo(map_8dfdc6530c9a29112f711c0a9ef8cea5);
+        
+    
+            var icon_9e7b62787592dc3d6f9245270103925d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "glyphicon-home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7bf888aa2283143bc6029963f28dfba0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c1cd27f8f3006a686f83b1fa76de2c2e = $(`<div id="html_c1cd27f8f3006a686f83b1fa76de2c2e" style="width: 100.0%; height: 100.0%;">Islamabad</div>`)[0];
+                popup_7bf888aa2283143bc6029963f28dfba0.setContent(html_c1cd27f8f3006a686f83b1fa76de2c2e);
+            
+        
+
+        marker_a344535f31637209aa25235ea33ca3e3.bindPopup(popup_7bf888aa2283143bc6029963f28dfba0)
+        ;
+
+        
+    
+    
+            marker_a344535f31637209aa25235ea33ca3e3.bindTooltip(
+                `<div>
+                     Islamabad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a344535f31637209aa25235ea33ca3e3.setIcon(icon_9e7b62787592dc3d6f9245270103925d);
+            
+    
+            var marker_16391d7f38b89d8d262d0ea4dff4f281 = L.marker(
+                [33.5651, 73.0169],
+                {
+}
+            ).addTo(map_8dfdc6530c9a29112f711c0a9ef8cea5);
+        
+    
+            var icon_e55bf5f489b8a0e7ef6d944cf030a842 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "glyphicon-home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e2919f9d100cca6c85e6216be61172eb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34ca22f908a2a803b92110c30d19973a = $(`<div id="html_34ca22f908a2a803b92110c30d19973a" style="width: 100.0%; height: 100.0%;">Rawalpindi</div>`)[0];
+                popup_e2919f9d100cca6c85e6216be61172eb.setContent(html_34ca22f908a2a803b92110c30d19973a);
+            
+        
+
+        marker_16391d7f38b89d8d262d0ea4dff4f281.bindPopup(popup_e2919f9d100cca6c85e6216be61172eb)
+        ;
+
+        
+    
+    
+            marker_16391d7f38b89d8d262d0ea4dff4f281.bindTooltip(
+                `<div>
+                     Rawalpindi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_16391d7f38b89d8d262d0ea4dff4f281.setIcon(icon_e55bf5f489b8a0e7ef6d944cf030a842);
+            
+    
+            var marker_4a7edfebf5188d024cf93e6c12f6bca4 = L.marker(
+                [31.4504, 73.135],
+                {
+}
+            ).addTo(map_8dfdc6530c9a29112f711c0a9ef8cea5);
+        
+    
+            var icon_7cc68c7051af8d71f995d3a0086f35b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "glyphicon-home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3ed5731547ee2294b9fed7d0d4016f25 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27bb74a9b13349d9edf0d8ee3a242a8c = $(`<div id="html_27bb74a9b13349d9edf0d8ee3a242a8c" style="width: 100.0%; height: 100.0%;">Faisalabad</div>`)[0];
+                popup_3ed5731547ee2294b9fed7d0d4016f25.setContent(html_27bb74a9b13349d9edf0d8ee3a242a8c);
+            
+        
+
+        marker_4a7edfebf5188d024cf93e6c12f6bca4.bindPopup(popup_3ed5731547ee2294b9fed7d0d4016f25)
+        ;
+
+        
+    
+    
+            marker_4a7edfebf5188d024cf93e6c12f6bca4.bindTooltip(
+                `<div>
+                     Faisalabad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4a7edfebf5188d024cf93e6c12f6bca4.setIcon(icon_7cc68c7051af8d71f995d3a0086f35b3);
+            
+</script>
+</html>

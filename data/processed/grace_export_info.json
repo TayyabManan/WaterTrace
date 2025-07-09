@@ -1,0 +1,8 @@
+{
+  "task_id": "QANNWH6GHILGPIL6BVLXRXXA",
+  "dataset_used": "GRACE (Updated)",
+  "dataset_id": "NASA/GRACE/MASS_GRIDS/MASCON",
+  "date_range": "2010-01-01 to 2023-12-31",
+  "expected_records": 72,
+  "export_started": true
+}
