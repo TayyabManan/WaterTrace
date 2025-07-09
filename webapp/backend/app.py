@@ -22,23 +22,43 @@ CORS(app,
 
 # Load models and data
 try:
-    model = joblib.load('data/processed/best_groundwater_model.pkl')
+    import os
+    # Get the base directory (webapp/backend)
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    # Go up two levels to reach the root directory
+    root_dir = os.path.dirname(os.path.dirname(base_dir))
+    
+    # Construct absolute paths
+    model_path = os.path.join(root_dir, 'data', 'processed', 'best_groundwater_model.pkl')
+    scaler_path = os.path.join(root_dir, 'data', 'processed', 'feature_scaler.pkl')
+    grace_path = os.path.join(root_dir, 'data', 'csv', 'pakistan_grace_2002_2017_complete.csv')
+    gldas_path = os.path.join(root_dir, 'data', 'csv', 'pakistan_gldas_2018_2024_monthly.csv')
+    
+    # Load model
+    model = joblib.load(model_path)
     try:
-        scaler = joblib.load('data/processed/feature_scaler.pkl')
+        scaler = joblib.load(scaler_path)
     except:
         scaler = None
     
     # Load processed datasets
-    grace_data = pd.read_csv('data/csv/pakistan_grace_2002_2017_complete.csv')
-    gldas_data = pd.read_csv('data/csv/pakistan_gldas_2018_2024_monthly.csv')
+    grace_data = pd.read_csv(grace_path)
+    gldas_data = pd.read_csv(gldas_path)
     
     grace_data['date'] = pd.to_datetime(grace_data['date'])
     gldas_data['date'] = pd.to_datetime(gldas_data['date'])
     
     print("✅ Models and data loaded successfully")
+    print(f"Model path: {model_path}")
+    print(f"GRACE data shape: {grace_data.shape}")
+    print(f"GLDAS data shape: {gldas_data.shape}")
     
 except Exception as e:
     print(f"⚠️ Error loading models/data: {e}")
+    print(f"Current working directory: {os.getcwd()}")
+    print(f"Base directory: {base_dir}")
+    print(f"Root directory: {root_dir}")
+    print(f"Looking for model at: {model_path}")
     model = None
     grace_data = None
     gldas_data = None
