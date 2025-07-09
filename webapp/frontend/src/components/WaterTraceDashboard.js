@@ -5,6 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import GroundwaterMap from './GroundwaterMap';
 import './WaterTrace.css';
+import API_URL from '../config';
 
 const WaterTraceDashboard = () => {
   const [historicalData, setHistoricalData] = useState([]);
@@ -22,11 +23,11 @@ const WaterTraceDashboard = () => {
     try {
       // Fetch all data
       const [historicalRes, recentRes, summaryRes, gldasRes, combinedRes] = await Promise.all([
-        fetch('/api/historical/timeseries'),
-        fetch('/api/recent/timeseries'), 
-        fetch('/api/analysis/summary'),
-        fetch('/api/gldas/trend-analysis'),
-        fetch('/api/combined/timeline')
+        fetch(`${API_URL}/api/historical/timeseries`),
+        fetch(`${API_URL}/api/recent/timeseries`), 
+        fetch(`${API_URL}/api/analysis/summary`),
+        fetch(`${API_URL}/api/gldas/trend-analysis`),
+        fetch(`${API_URL}/api/combined/timeline`)
       ]);
 
       const historical = await historicalRes.json();
