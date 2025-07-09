@@ -508,7 +508,7 @@ const WaterTraceDashboard = () => {
         <footer className="mt-16 py-8 border-t border-blue-200">
           <div className="text-center">
             <h3 className="text-lg font-semibold text-blue-900 mb-2">Tayyab Manan</h3>
-            <p className="text-blue-700 mb-4">GIS Developer & Spatial Analyst</p>
+            <p className="text-blue-700 mb-4">GIS Analyst & Spatial Developer</p>
             <div className="flex justify-center space-x-6">
               <a 
                 href="https://github.com/TayyabManan" 
