@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, CircleMarker, Popup, Legend } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
+import API_URL from '../config';
 
 // Pakistan district coordinates (major cities)
 const districtCoordinates = {
@@ -56,7 +57,7 @@ const GroundwaterMap = () => {
 
   const fetchDistrictData = async () => {
     try {
-      const response = await fetch('/api/districts/groundwater');
+      const response = await fetch(`${API_URL}/api/districts/groundwater`);
       const data = await response.json();
       setDistrictData(data);
       setLoading(false);
