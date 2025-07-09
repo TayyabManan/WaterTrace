@@ -43,7 +43,7 @@ const LoadingScreen = ({ loadingStages = [], currentStage = 0 }) => {
     <div className="loading-screen">
       <div className="loading-container">
         <div className="loading-logo">
-          <svg width="80" height="80" viewBox="0 0 80 80" className="water-drop">
+          <svg viewBox="0 0 80 80" className="water-drop">
             <path
               d="M40 10 C40 10, 20 35, 20 50 C20 61, 29 70, 40 70 C51 70, 60 61, 60 50 C60 35, 40 10, 40 10"
               fill="url(#waterGradient)"
