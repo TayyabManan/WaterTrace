@@ -8,7 +8,17 @@ from datetime import datetime
 import json
 
 app = Flask(__name__)
-CORS(app)
+
+# Configure CORS for production
+CORS(app, 
+     origins=[
+         "http://localhost:3000",  # Development
+         "https://watertrace.vercel.app",  # Production Vercel
+         "https://*.vercel.app"  # All Vercel preview deployments
+     ],
+     methods=["GET", "POST", "OPTIONS"],
+     allow_headers=["Content-Type", "Authorization"]
+)
 
 # Load models and data
 try:
