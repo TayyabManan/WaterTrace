@@ -21,6 +21,9 @@ const WaterTraceDashboard = () => {
 
   const fetchData = async () => {
     try {
+      console.log('API URL:', API_URL);
+      console.log('Fetching data from WaterTrace backend...');
+      
       // Fetch all data
       const [historicalRes, recentRes, summaryRes, gldasRes, combinedRes] = await Promise.all([
         fetch(`${API_URL}/api/historical/timeseries`),
