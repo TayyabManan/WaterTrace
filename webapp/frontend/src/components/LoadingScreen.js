@@ -3,7 +3,7 @@ import './LoadingScreen.css';
 
 const LoadingScreen = ({ loadingStages = [], currentStage = 0 }) => {
   const [progress, setProgress] = useState(0);
-  const [showEstimatedTime, setShowEstimatedTime] = useState(true);
+  const [showEstimatedTime] = useState(true);
   const [estimatedTime, setEstimatedTime] = useState(10); // seconds
 
   useEffect(() => {

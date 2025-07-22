@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Chart Data</title>
+</head>
+<body>
+    <h1>Debug Chart Data</h1>
+    <button onclick="fetchData()">Fetch Combined Timeline</button>
+    <pre id="output"></pre>
+    
+    <script>
+    async function fetchData() {
+        const output = document.getElementById('output');
+        try {
+            const response = await fetch('https://watertrace-api.watertrace.workers.dev/api/combined/timeline');
+            const data = await response.json();
+            
+            // Show first and last few data points
+            output.textContent = 'Total data points: ' + data.data.length + '\n\n';
+            output.textContent += 'First 5 GRACE points:\n';
+            output.textContent += JSON.stringify(data.data.slice(0, 5), null, 2) + '\n\n';
+            
+            // Find where GRACE ends and GLDAS begins
+            const graceData = data.data.filter(d => d.source === 'GRACE');
+            const gldasData = data.data.filter(d => d.source === 'GLDAS');
+            
+            output.textContent += 'Last 5 GRACE points:\n';
+            output.textContent += JSON.stringify(graceData.slice(-5), null, 2) + '\n\n';
+            
+            output.textContent += 'First 5 GLDAS points:\n';
+            output.textContent += JSON.stringify(gldasData.slice(0, 5), null, 2) + '\n\n';
+            
+            output.textContent += 'GRACE count: ' + graceData.length + '\n';
+            output.textContent += 'GLDAS count: ' + gldasData.length + '\n';
+            
+            // Check for continuity
+            const lastGrace = graceData[graceData.length - 1];
+            const firstGldas = gldasData[0];
+            output.textContent += '\nLast GRACE value: ' + lastGrace.value + '\n';
+            output.textContent += 'First GLDAS value: ' + firstGldas.value + '\n';
+            
+        } catch (error) {
+            output.textContent = 'Error: ' + error.message;
+        }
+    }
+    </script>
+</body>
+</html>

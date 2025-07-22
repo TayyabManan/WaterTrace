@@ -1,0 +1,11 @@
+name = "watertrace-api"
+main = "src/index.ts"
+compatibility_date = "2024-11-11"
+
+# Uncomment and update these when you're ready to deploy
+# [env.production]
+# route = { pattern = "api.watertrace.com/*", zone_name = "watertrace.com" }
+
+# For local development
+[env.development.vars]
+ENVIRONMENT = "development"

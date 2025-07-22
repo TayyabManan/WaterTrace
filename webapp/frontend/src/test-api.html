@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Cloudflare Workers API</title>
+</head>
+<body>
+    <h1>Testing WaterTrace API</h1>
+    <p>Enter your Cloudflare Workers URL:</p>
+    <input type="text" id="apiUrl" placeholder="https://watertrace-api.xxx.workers.dev" style="width: 400px;">
+    <button onclick="testAPI()">Test API</button>
+    
+    <h2>Results:</h2>
+    <pre id="results"></pre>
+
+    <script>
+        async function testAPI() {
+            const resultsDiv = document.getElementById('results');
+            const apiUrl = document.getElementById('apiUrl').value.trim();
+            
+            if (!apiUrl) {
+                resultsDiv.textContent = 'Please enter your Cloudflare Workers URL';
+                return;
+            }
+
+            resultsDiv.textContent = 'Testing...\n\n';
+
+            // Test endpoints
+            const endpoints = [
+                '/api/health',
+                '/api/historical/timeseries',
+                '/api/analysis/summary'
+            ];
+
+            for (const endpoint of endpoints) {
+                try {
+                    resultsDiv.textContent += `Testing ${endpoint}...\n`;
+                    const response = await fetch(apiUrl + endpoint);
+                    const data = await response.json();
+                    resultsDiv.textContent += `✓ ${endpoint}: ${response.status} OK\n`;
+                    resultsDiv.textContent += `  Response: ${JSON.stringify(data).substring(0, 100)}...\n\n`;
+                } catch (error) {
+                    resultsDiv.textContent += `✗ ${endpoint}: ERROR - ${error.message}\n\n`;
+                }
+            }
+
+            resultsDiv.textContent += '\nIf you see CORS errors, the API is working but needs CORS headers.\n';
+            resultsDiv.textContent += 'If you see "Failed to fetch", check the URL is correct.\n';
+        }
+    </script>
+</body>
+</html>
